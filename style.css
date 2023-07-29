@@ -1,0 +1,580 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #173334;
+    color: white;
+    height: 17vh;
+}
+
+header nav {
+    padding: 2vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.logo {
+    color: #febd2f;
+    font-weight: 600;
+    font-size: 2vw;
+}
+
+form {
+    border: 0.1vw solid rgba(255, 255, 255, 0.607);
+    border-radius: 0.25vw;
+    height: 2vw;
+    display: flex;
+    gap: 0.5vw;
+}
+
+.btnsrch {
+    margin-left: .5vw;
+}
+
+.serch,
+.btnsrch,
+button {
+    background-color: #173334;
+    border: none;
+    color: white;
+}
+
+.serch {
+    height: 1.5vw;
+    font-size: 1vw;
+    padding-top: 1vh;
+    margin-right: 0.25vw;
+}
+
+.serch:focus {
+    outline: none;
+}
+
+#select {
+    background-color: #173334;
+    color: white;
+    border: none;
+    border-left: 0.1vw solid rgba(255, 255, 255, 0.401);
+    font-size: 1.25vw;
+    padding-bottom: 0.1vw;
+    padding-left: 0.1vw;
+    padding: 0.1vw;
+    font-size: 1vw;
+    height: 1.9vw;
+}
+
+.timing,
+.contact {
+    font-size: 1vw;
+}
+
+
+.bottom {
+    margin-top: 1vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.system ul {
+    height: 27vh;
+    padding: 1vh;
+    border-radius: 1vw;
+    width: 17vw;
+    border: none;
+    background-color: #173334;
+    margin-left: 3vw;
+    margin-top: 2vh;
+}
+
+.system ul li .All {
+    margin-top: 1vw;
+    border-radius: 1vh;
+    background-color: #febd2f;
+}
+
+.system ul li a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+.system ul li {
+    margin-top: 0.6vw;
+    margin-left: 0.5vw;
+    width: 15vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.system ul li:hover,
+.All {
+    border-radius: 1vw;
+    background-color: #febd2f;
+}
+
+.system ul li a:hover {
+    color: black;
+}
+
+.arrow1 {
+    float: right;
+    margin-right: 1vw;
+}
+
+.arrow2 {
+    float: right;
+    margin-right: 1vw;
+
+}
+
+.arrow3 {
+    float: right;
+    margin-right: 1vw;
+
+}
+
+.arrow4 {
+    float: right;
+    margin-right: 1vw;
+
+}
+
+.arrow5 {
+    float: right;
+    margin-right: 1vw;
+
+}
+
+.arrow6 {
+    float: right;
+    margin-right: 1vw;
+
+}
+
+.arrow7 {
+    float: right;
+    margin-right: 1vw;
+
+}
+
+.list ul {
+    margin-right: 5vw;
+}
+
+.list ul li {
+    display: inline-block;
+}
+
+.list ul li a {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 0.5vw;
+    font-size: 1vw;
+}
+
+.list ul li a:hover {
+    color: #febd2f;
+}
+
+main .first {
+    height: 50vh;
+    width: 100%;
+    background-color: #febd2f;
+}
+
+.service {
+    background-color: #1733348f;
+    width: 17vw;
+    height: 28vh;
+    position: relative;
+    top: 28vh;
+    left: 11vw;
+    border-radius: 1vw;
+}
+
+.service:hover {
+    background-size: 21vw 31vh;
+}
+
+.time {
+    color: #febd2f;
+    font-size: 1.5vw;
+    margin-left: 1vw;
+}
+
+
+.slogan {
+    width: 15vw;
+    color: white;
+    position: relative;
+    top: -6vw;
+    font-size: 1vw;
+    justify-content: center;
+    margin-left: 1vw;
+}
+
+.veggies {
+    width: 30vw;
+    position: relative;
+    float: right;
+    margin-right: 10vw;
+    top: -50vh;
+}
+
+.deliimg {
+    width: 6vw;
+    position: relative;
+    left: 10vw;
+    top: -11vh;
+}
+
+.showmore {
+    position: relative;
+    top: -9vh;
+    margin-left: 1vw;
+}
+
+.showmore a {
+    border: none;
+    border-radius: 0.25vw;
+    text-decoration: none;
+    color: #173334;
+    background-color: #febd2f;
+    padding: 0.25vw;
+    font-size: 1vw;
+}
+
+.showmore a:hover {
+    background-color: #173334;
+    color: #febd2f;
+}
+
+.main2centr {
+    width: 30vw;
+    height: 40vh;
+    position: relative;
+    left: 30vw;
+    top: -15vh;
+}
+
+.main2centr .slogans {
+    font-size: 2vw;
+    color: #173334;
+}
+
+.slogans {
+    position: relative;
+    top: -3vh;
+    margin-left: 0.5vw;
+    margin-bottom: 1vw;
+}
+
+button a {
+    color: #173334;
+    background-color: white;
+    border-radius: 0.25vw;
+    padding: 0.25vw;
+    text-decoration: none;
+}
+
+.middleslogan {
+    position: relative;
+    top: -4vh;
+    width: 30vw;
+    margin-left: 0.5vw;
+    color: #173334;
+    font-weight: 300;
+    font-size: 1vw;
+}
+
+.Showproduct {
+    background-color: white;
+    color: #173334;
+    margin-left: 0.5vw;
+    padding: 0.5vw;
+    border-radius: 0.25vw;
+}
+
+.Showproduct a:hover,
+.Showproduct:hover {
+    color: #febd2f;
+    background-color: #173334;
+}
+
+.second {
+    height: 100vh;
+}
+
+div .hing {
+    font-size: 2.5vw;
+    margin: 10vh;
+    margin-left: 11vw;
+    color: #173334;
+}
+
+.second .orange {
+    width: 10vw;
+    left: -2vw;
+    top: -5vh;
+    margin-left: -1vw;
+    opacity: 50%;
+    position: relative;
+}
+
+.second .coco {
+    float: right;
+    width: 15vw;
+}
+
+.second .pine {
+    position: relative;
+    top: -90vh;
+    z-index: -1;
+    align-self: center;
+    opacity: 65%;
+    rotate: -10deg;
+    left: 30vw;
+    width: 30vw;
+}
+
+.categories {
+    display: flex;
+    align-content: center;
+    position: relative;
+    top: -43vh;
+    left: 10vw;
+    width: 80%;
+    height: 26%;
+    justify-items: center;
+}
+
+.categories div {
+    justify-content: space-evenly;
+    margin: 1.5vw;
+    width: 35vw;
+    height: 25vh;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    transition: 1s;
+}
+
+
+.categories .box1 {
+    background-image: url('/box1.avif');
+    background-size: cover;
+}
+
+.categories .box2 {
+    background-image: url('/box2.avif');
+    background-size: cover;
+}
+
+.categories .box3 {
+    background-image: url('/box3.avif');
+    background-size: cover;
+}
+
+.categories .box4 {
+    background-image: url('/box4.avif');
+    background-size: cover;
+}
+
+.second .categories .head {
+    color: #febd2f;
+    margin-left: 0.5vw;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+
+.second .categories .cont {
+    color: white;
+    margin-left: 1vw;
+    font-weight: 600;
+    height: 8vh;
+}
+
+.second .categories .goto {
+    color: #173334;
+    background-color: #febd2f;
+    border-radius: 0.25vw;
+    font-weight: 600;
+    font-size: 1vw;
+    padding: 0.5vw;
+    margin-left: 1vw;
+}
+
+.second .categories .goto:hover {
+    color: #febd2f;
+    background-color: #173334;
+}
+
+.rating {
+    position: relative;
+    top: -100vh;
+    width: 50%;
+    margin-left: 11vw;
+    color: #173334;
+}
+
+.rating div:hover {
+    background-color: #173334;
+    color: #febd2f;
+}
+
+.third {
+    background-color: #173334;
+    height: 85vh;
+}
+
+.third .thmain {
+    color: white;
+    padding-top: 5vh;
+    margin-left: 11vw;
+    margin-bottom: 2vh;
+    font-size: 2.5vw;
+}
+
+.third nav ul {
+    display: flex;
+    margin-left: 11vw;
+    gap: 1.5vw;
+}
+
+.third nav ul li a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1vw;
+    transition: color .5s;
+}
+
+.third nav ul li a:hover {
+    color: #febd2f;
+}
+
+.items {
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 3vh;
+}
+
+.items div {
+    justify-content: space-evenly;
+    margin: 1vw;
+    width: 25vw;
+    height: 55vh;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    background-color: white;
+    line-height: 3.5vh;
+    padding-left: 1vw;
+    font-size: 1vw;
+}
+
+.firsti button a:hover {
+    background-color: #173334;
+    color: #febd2f;
+
+}
+
+.fourth {
+    background-color: #febd2f;
+    height: 70vh;
+    margin-top: -7vh;
+}
+
+.fourth div {
+    padding-top: 10vh;
+    padding-left: 11vw;
+}
+
+.headl {
+    font-size: 2.5vw;
+}
+
+.fourth p {
+    width: 30vw;
+    margin-top: 2vh;
+    font-size: 1vw;
+}
+
+.fourth button {
+    font-size: 1vw;
+    padding: 0.5vw;
+    margin-top: 2vh;
+    color: #febd2f;
+    background-color: #173334;
+    border: none;
+    border-radius: 0.25vw;
+}
+
+.fourth button:hover {
+    background-color: white;
+    color: #173334;
+}
+
+.imghel {
+    background-size: cover;
+    background-image: url();
+    width: 20vw;
+    height: 20vw;
+    position: relative;
+    top: -300px;
+    left: 50vw;
+    border-color: #febd2f;
+    border-radius: 5px;
+}
+
+.imghel h1 {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    font-size: 30px;
+}
+
+.imghel button {
+    position: absolute;
+    top: 180px;
+    left: -3px;
+}
+
+footer {
+    background-color: #173334;
+    width: 100%;
+}
+
+footer div {
+    margin-top: 15vh;
+
+}
+
+footer div div {
+    margin-left: 2vw;
+}
+
+footer div div a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.abnav div a {
+    font-size: 1vw;
+}
+
+.abnav div a:hover {
+    color: #febd2f;
+}

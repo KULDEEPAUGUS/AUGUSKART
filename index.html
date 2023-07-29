@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
+    <title>Online Shopping Site: Grocery The AUGUS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Kanit:wght@200&family=Noto+Sans+KR:wght@500&family=Tiro+Devanagari+Hindi&family=Ubuntu:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="return set_height()">
+    <header class="top">
+        <nav>
+            <h1 class="logo">Auguskart</h1>
+            <form action="search.php" class="search">
+                <button class="btnsrch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#febd2f"
+                        border-right-width: 150%; class="bi bi-search" viewBox="0 0 16 16" class="iconsearch">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg></button> <input type="search" placeholder="Search here.." class="serch">
+                <select name="selection" id="select">
+                    <option value="All">All Categories</option>
+                    <option value="Vegetable">Vegetables</option>
+                    <option value="All">Fruits</option>
+                    <option value="All">Dry Fruits</option>
+                    <option value="All">Special Product</option>
+                    <option value="All">Accessories</option>
+                </select>
+            </form>
+            <p class="timing"><a style="text-decoration: none;color: white;" href="https://time.is/">Monday-Friday
+                    <br><span style="border: none;color:rgb(254, 189, 47);">8:00AM-9:00PM</a></span></p>
+            <p class="contact"><a style="text-decoration: none;color: white;"
+                    href="https://mail.google.com/mail/u/0/#inbox?compose=new">Support 24/7
+                    <br><span style="border: none;color:rgb(254, 189, 47); ;">+9179820XXXX</span></a></p>
+            <button>
+                <a href="/login.html" style="background-color: #173334;border: none;">
+                    <svg style="color: rgb(254, 189, 47);" xmlns="http://www.w3.org/2000/svg" width="1.5vw"
+                        height="1.5vw" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="#febd2f"></path>
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                            fill="#febd2f"></path>
+                    </svg>
+                </a>
+            </button>
+            <button>
+                <a href="/wishlist.html" style="background-color: #173334;border: none;">
+                    <svg style="color: rgb(254, 189, 47);" xmlns="http://www.w3.org/2000/svg" width="1.5vw"
+                        height="1.5vw" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                            fill="#febd2f"></path>
+                    </svg>
+                </a>
+            </button>
+            <div style="display: flex;align-items: center;gap:0.25vw">
+                <span style="border: none;font-size: 1vw;margin-right: 0.5vw;">
+                    <p>My cart:<br>0.00 INR</p>
+                </span>
+                <button action="nkcn.php">
+                    <a href="/cart.html" style="background-color: #173334;border: none;">
+                        <svg style="color: rgb(254, 189, 47);" xmlns="http://www.w3.org/2000/svg" width="1.5vw"
+                            height="1.5vw" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </a>
+                </button>
+            </div>
+        </nav>
+        <div class="bottom">
+            <div class="system">
+                <ul>
+                    <li class="All"><a href="" style="color: black;">All Categories <span
+                                class="arrow1">&rarr;</span></a></li>
+                    <li><a href="">Vegetable <span class="arrow2">&rarr;</span> </a></li>
+                    <li><a href="">Fruits <span class="arrow3">&rarr;</span></a></li>
+                    <li><a href="">Dry Fruits <span class="arrow4">&rarr;</span></a></li>
+                    <li><a href="">Cookies <span class="arrow5">&rarr;</span></a></li>
+                    <li><a href="">Sweets <span class="arrow6">&rarr;</span></a></li>
+                    <li><a href="">Home Accessories <span class="arrow7">&rarr;</span></a></li>
+                </ul>
+            </div>
+            <div class=" para" style="color:rgb(254, 189, 47);font-size: 1vw;">
+                -20% <span style="border: none;color: white;">off for first order with &#8377;&numsp;300 in the
+                    cart. <a href="/show" style="color: white;">Show More</a></span>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><a href="Faq">Faq</a></li>
+                    <li><a href="Suppor">Support</a></li>
+                    <li><a href="Cs">ContactUs</a></li>
+                    <li><a href="As">AboutUs</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="first">
+            <div class="service">
+                <button
+                    style="color: black;background: white;border-radius: 0.25vw;padding: 0.25vw;margin: 1vw;font-size: 1vw;">Delievery
+                    Services</button>
+                <h1 class="time">Delivery <br> in 24 hours</h1>
+                <img src="/delievery-removebg-preview.png" alt="" class="deliimg">
+                <div class="slogan">
+                    <p>Our Grocery Partner Deliever The Product Straight From The Farm.</p>
+                </div>
+                <button class="showmore"><a href="Showing">Show More</a></button>
+            </div>
+            <div class="main2centr">
+                <button class="Disc" style="font-size: 1vw;position: relative;top:-3vw;margin-left: 0.5vw;"><a
+                        href="#daily">Daily Discounts</a></button>
+                <h1 class="slogans" style="font-weight: 600;">Healthy Fruits <br> and Vegetables</h1>
+                <p class="middleslogan">
+                    Fruits, vegetables and lots of greens. Eat fruits plenty, keep your body healthy. Die old with
+                    fruits
+                    and vegetables. Make the switch to fruits and vegetables.
+                </p>
+                <button class="Showproduct"><a href="">Show Products</a></button>
+            </div>
+            <img src="/vegetables-gf56dd0880_1280.png" alt="" class="veggies">
+        </div>
+        <div class="second">
+            <h1 class="hing">
+                Categories Which are Loved
+            </h1>
+            <img src="/orange.webp" alt="" class="orange">
+            <div class="categories">
+                <div class="box1">
+                    <h1 class="head">
+                        Fruits
+                    </h1>
+                    <p class="cont">
+                        Give a hoot, eat more fruit! Fruit in a day is the healthy way!
+                    </p>
+                    <button class="goto">
+                        Go to Category
+                    </button>
+                </div>
+                <div class="box2">
+                    <h1 class="head">
+                        vegetables
+                    </h1>
+                    <p class="cont">
+                        The treasure of a good life is hidden in vegetables. Get strong eat vegetables
+                    </p>
+                    <button class="goto">
+                        Go to Category
+                    </button>
+                </div>
+                <div class="box3">
+                    <h1 class="head">
+                        Dry Fruits
+                    </h1>
+                    <p class="cont">
+                        Consume dried fruits to be healthy. Because life is defined by health.
+                    </p>
+                    <button class="goto">
+                        Go to Category
+                    </button>
+                </div>
+                <div class="box4">
+                    <h1 class="head">
+                        Cookies
+                    </h1>
+                    <p class="cont">
+                        For Serious Cookie Munchers. Freshly Baked.
+                    </p>
+                    <button class="goto">
+                        Go to Category
+                    </button>
+                </div>
+            </div>
+            <img src="/pineapple-295366_640.webp" alt="" class="pine">
+            <img src="/coconut-7876154_640.webp" alt="" class="coco"
+                style="opacity: 50%;position:relative;right: 10vw;">
+            <div class="rating">
+                <button
+                    style="font-size: 1vw;position: relative;top: -3vh;color: #173334;background-color: #febd2f;padding: 0.5vw;border-radius: 0.25vw;">
+                    Daily Discounts
+                </button>
+                <h1 class="mhd" style="font-size: 2vw;margin-top: -1vh;margin-bottom: 1vh;">
+                    Fruits and vegetables
+                </h1>
+                <p class="contens" style="font-size: 1vw;font-weight: 400;">
+                    If you go to jungles or forests untouched by man, <br>you will see fruit and vegetables that look
+                    like they <br> sprouted from trees from Heaven.
+                <p style="color: maroon;margin-top: 0.25vh;font-size: 1vw;">So, You are in Heaven.</p>
+                </p>
+                <button id="order"
+                    style="color:#173334;background-color:#febd2f;padding: 0.5vw;border-radius: 0.25vw;margin-top: 2vw;font-size: 1vw;">
+                    order now
+                </button>
+            </div>
+            <div class="customer">
+            </div>
+        </div>
+        <div class="third">
+            <h1 class="thmain">
+                Our Best Sellers
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="Alli">All categories</a></li>
+                    <li><a href="vegea">vegetables</a></li>
+                    <li><a href="fru">Fruits</a></li>
+                    <li><a href="access">Accessories</a></li>
+                </ul>
+            </nav>
+            <div class="items">
+                <div class="firsti">
+                    <img src="/heart-line-icon.svg" alt="" width="25vw" style="float: right;">
+                    <img src="/items1.jpeg" alt="" width="90%">
+                    <h4 style="font-weight: 300;font-size: 1.25vw;">Fruits</h4>
+                    <h2 style="font-size: 2vw;font-weight: 600;">Apples</h2>
+                    <p style="font-size: 1vw;font-weight: 600;"> &#9733;&#9733;&#9733;&#9733;&#9733;(5)</p>
+                    <p class="price" style="font-size: 1vw;">&#8377;300 <del
+                            style="color: grey;font-size: 1vw;">&#8377;600</del></p>
+                    <span style="font-weight: 500;font-size: 1vw;">size</span>
+                    <span style="float: right;margin-right: 2vw;font-size: 1vw;">Quantity</span>
+                    <form action="/gotocart">
+                        <select name="size" id="size"
+                            style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                            <option value="500gm"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                500gm</option>
+                            <option value="1kg"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                1kg</option>
+                        </select>
+                        <input type="number" placeholder="Quantity" style="width: 3vw;margin-left: 5vw;font-size: 1vw;"
+                            style="background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277)">
+                    </form>
+                    <button
+                        style="width: 14vw;background-color: #febd2f;color: #173334;padding: 0.5vw;margin-top: 1vh;border-radius: 0.25vw;font-size: 1vw;">
+                        <a href="/addtocart"
+                            style="padding-left: 3.75vw;padding-right: 3.75vw;background-color: #febd2f;color: #173334;">
+                            Add To Cart
+                        </a>
+                    </button>
+                </div>
+                <div class="secondi">
+                    <img src="/heart-line-icon.svg" alt="" width="25vw" style="float: right;">
+                    <img src="/pumpkin-3624499_960_720.jpg" alt="" width="77%">
+                    <h4 style="font-weight: 300;font-size: 1.25vw;">Vegetable</h4>
+                    <h2 style="font-size: 2vw;font-weight: 600;">Pumpkin</h2>
+                    <p style="font-size: 1vw;font-weight: 600;"> &#9733;&#9733;&#9733;&#9733;&#9733;(5)</p>
+                    <p class="price" style="font-size: 1vw;">&#8377;450 <del
+                            style="color: grey;font-size: 1vw;">&#8377;700</del></p>
+                    <span style="font-weight: 500;font-size: 1vw;">size</span>
+                    <span style="float: right;margin-right: 2vw;font-size: 1vw;">Quantity</span>
+                    <form action="/gotocart">
+                        <select name="size" id="size"
+                            style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                            <option value="500gm"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                500gm</option>
+                            <option value="1kg"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                1kg</option>
+                        </select>
+                        <input type="number" placeholder="Quantity" style="width: 3vw;margin-left: 5vw;font-size: 1vw;"
+                            style="background-color: white;border: 1px solid rgba(0, 0, 0, 0.277)">
+                    </form>
+                    <button
+                        style="width: 14vw;background-color: #febd2f;color: #173334;padding: 0.5vw;margin-top: 1vh;border-radius: 0.25vw;font-size: 1vw;">
+                        <a href="/addtocart"
+                            style="padding-left: 3.75vw;padding-right: 3.75vw;background-color: #febd2f;color: #173334;">
+                            Add To Cart
+                        </a>
+                    </button>
+                </div>
+                <div class="thirdi">
+                    <img src="/heart-line-icon.svg" alt="" width="25vw" style="float: right;">
+                    <img src="/photo-1615485925873-7ecbbe90a866.avif" alt="" width="77%">
+                    <h4 style="font-weight: 300;font-size: 1.25vw;">Dry Fruits</h4>
+                    <h2 style="font-size: 2vw;font-weight: 600;">cashew</h2>
+                    <p style="font-size: 1vw;font-weight: 600;"> &#9733;&#9733;&#9733;&#9733;&#9733;(5)</p>
+                    <p class="price" style="font-size: 1vw;">&#8377;450 <del
+                            style="color: grey;font-size: 1vw;">&#8377;700</del></p>
+                    <span style="font-weight: 500;font-size: 1vw;">size</span>
+                    <span style="float: right;margin-right: 2vw;font-size: 1vw;">Quantity</span>
+                    <form action="/gotocart">
+                        <select name="size" id="size"
+                            style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                            <option value="500gm"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                500gm</option>
+                            <option value="1kg"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                1kg</option>
+                        </select>
+                        <input type="number" placeholder="Quantity" style="width: 3vw;margin-left: 5vw;font-size: 1vw;"
+                            style="background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277)">
+                    </form>
+                    <button
+                        style="width: 14vw;background-color: #febd2f;color: #173334;padding: 0.5vw;margin-top: 1vh;border-radius: 0.25vw;font-size: 1vw;">
+                        <a href="/addtocart"
+                            style="padding-left: 3.75vw;padding-right: 3.75vw;background-color: #febd2f;color: #173334;">
+                            Add To Cart
+                        </a>
+                    </button>
+                </div>
+                <div class="fourthi">
+                    <img src="/heart-line-icon.svg" alt="" width="25vw" style="float: right;">
+                    <img src="/cookies.avif" alt="" width="78%">
+                    <h4 style="font-weight: 300;font-size: 1.25vw;">Bakery</h4>
+                    <h2 style="font-weight: 300;font-size: 1.25vw;">Cookies</h2>
+                    <p style="font-size: 1vw;font-weight: 600;"> &#9733;&#9733;&#9733;&#9733;&#9733;(5)</p>
+                    <p class="price" style="font-size: 1vw;">&#8377;250 <del
+                            style="color: grey;font-size: 1vw;">&#8377;500</del></p>
+                    <span style="font-weight: 500;font-size: 1vw;">size</span>
+                    <span style="float: right;margin-right: 2vw;font-size: 1vw;">Quantity</span>
+                    <form action="/gotocart">
+                        <select name="size" id="size"
+                            style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                            <option value="500gm"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                500gm</option>
+                            <option value="1kg"
+                                style="font-size: 1vw;background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277);border-radius: 0.15vw;padding-left: 0.25vw;">
+                                1kg</option>
+                        </select>
+                        <input type="number" placeholder="Quantity" style="width: 3vw;margin-left: 5vw;font-size: 1vw;"
+                            style="background-color: white;border: .1vw solid rgba(0, 0, 0, 0.277)">
+                    </form>
+                    <button
+                        style="width: 14vw;background-color: #febd2f;color: #173334;padding: 0.5vw;margin-top: 1vh;border-radius: 0.25vw;font-size: 1vw;">
+                        <a href="/addtocart"
+                            style="padding-left: 3.75vw;padding-right: 3.75vw;background-color: #febd2f;color: #173334;">
+                            Add To Cart
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="fourth">
+            <div>
+                <h1 class="headl">
+                    Goodies for Your Little Ones
+                </h1>
+                <p>They're made from botanically pure ingredients, so you can feel good about eating them. Plus, they're
+                    really nutritious, so you can feel good too. The best part is that they're all vegan and
+                    gluten-free, so
+                    you can have them any time of day. So go on and make yourself a bowl of these healthy and delicious
+                    fruits & vegetables today!</p>
+                <button class="sm">
+                    Show More
+                </button>
+            </div>
+            <div class="imghel">
+                Currently under progress! Sorry for inconvenience
+            </div>
+        </div>
+    </main>
+    <footer style="background-color: #173334;height: 50vh;color: white;margin-top: -15vh;">
+        <div class="itks"
+            style="display: flex; justify-content: space-evenly;position: relative;top: -25vh;background-size:2vw;">
+            <div class="fir"
+                style="color: #f2f8f9;background-image: url(/items3.jpg);width: 20vw;background-size:20vw;padding: 3vh;border: none;border-radius: 0.25vw;">
+                <h2
+                    style="font-weight: 600;color:rgb(239, 193, 5);background-color:#17333499;font-size: 2vw;width: 15vw;">
+                    Blue Berries</h2><br>
+                <button><a href="/read"
+                        style="background-color:#173334; color: #febd2f;font-size: 1vw;padding: 0.5vw;">Read
+                        More</a></button>
+            </div>
+            <div class="seni"
+                style="padding: 3vh;background-image: url('/items4.jpg');width: 20vw;background-size: cover;border: none;border-radius: 0.25vw;">
+                <h2
+                    style="font-weight: 600;color:rgb(239, 193, 5);background-color:#17333499;font-size: 2vw;width: 15vw;">
+                    Berries</h2><br>
+                <button><a href="/read"
+                        style="background-color:#173334; color: #febd2f;font-size: 1vw;padding: 0.5vw;">Read
+                        More</a></button>
+            </div>
+            <div class="thi"
+                style="background-image: url('https://grocery-workdo.myshopify.com/cdn/shop/files/3_e2fc618e-cf11-4c99-a472-4b852f8f3fd0.png?v=1672216478');width: 20vw; height: 20vh ;background-size: cover;padding: 3vh;border: none;border-radius: 0.25vw;">
+                <h2
+                    style="font-weight: 600;color:rgb(239, 193, 5);background-color:#17333499;font-size: 2vw;width: 15vw;">
+                    kiwi</h2><br>
+                <button><a href="/read"
+                        style="background-color:#173334; color: #febd2f;font-size: 1vw;padding: 0.5vw;">Read
+                        More</a></button>
+            </div>
+        </div>
+        <div class="abnav" style="display: flex;margin-left: 6.5vw;;margin-top: -35vh;justify-content: space-evenly;">
+            <div class="fi" style="width: 30vw;">
+                <h4 style="color: #febd2f;font-size:2vw">Auguskart</h4>
+                <p style="font-size: 1vw;margin-top: 3vh;line-height:3vh;">Fruits, vegetables and lots of greens.
+                    Eat
+                    fruits plenty, keep
+                    your body
+                    healthy.
+                    We are the organization which provide the organic fruits and vegetable which are good for health and
+                    have a motive of healthy India and we know you will definetly help us to fullfill this dream.
+                </p>
+            </div>
+            <div class="se">
+                <h4 style="font-size: 1.5vw">Navigation</h4>
+                <p style="font-size: 1vw;margin-top: 3vh;line-height: 3vh;"><a href="/search">Search</a><br>
+                    <a href="/search">Cart</a><br>
+                    <a href="/search">Wishlist</a><br>
+                    <a href="/search">Login</a><br>
+                </p>
+            </div>
+            <div class="th">
+                <h4 class="about" style="font-size:1.5vw;">
+                    About Us
+                </h4>
+                <p style="width: 20vw;margin-top: 3vh;line-height: 3vh;">
+                    <a href="">About Us</a><br>
+                    <a href="">Contact Us</a><br>
+                    <a href="">Faq</a><br>
+                    <a href="">Shipping & Deliveries</a><br>
+                    <a href="">Terms and Condition</a><br>
+                </p>
+            </div>
+            <div class="fo">
+                <h4 class="cate" style="font-size:1.5vw;">
+                    All Categories
+                </h4>
+                <p style="width: 20vw;margin-top: 3vh;line-height: 3vh;">
+                    <a href="">vegetables</a><br>
+                    <a href="">fruits</a><br>
+                    <a href="">Accessories</a><br>
+                    <a href="">Cookies</a><br>
+                    <a href="">Best Sellers</a><br>
+                </p>
+            </div>
+        </div>
+        <p style="text-align: center;margin-top: 5vh;font-size: 1vw;">&copy; Auguskart , Created by <a
+             class="portfolio"   href="https://portfoliokuldeep.netlify.app" target="_blank" style="color:white;text-decoration: none;">
+                Kuldeep Chotiya :)</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

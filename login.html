@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
+    <title>Login: Online Shopping Site Grocery The AUGUS</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Kanit:wght@200&family=Noto+Sans+KR:wght@500&family=Tiro+Devanagari+Hindi&family=Ubuntu:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="top">
+        <nav>
+            <h1 class="logo">Auguskart</h1>
+            <form action="search.php" class="search">
+                <button style="margin-top: 0px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" color="#febd2f"
+                        border-right-width: 150%; class="bi bi-search" viewBox="0 0 16 16" class="iconsearch">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg></button> <input type="search" placeholder="Search here.." class="serch">
+                <select name="selection" id="select" style="height: 20px;margin-top: 0px;">
+                    <option value="All">All Categories</option>
+                    <option value="Vegetable">Vegetables</option>
+                    <option value="All">Fruits</option>
+                    <option value="All">Dry Fruits</option>
+                    <option value="All">Special Product</option>
+                    <option value="All">Accessories</option>
+                </select>
+            </form>
+            <p class="timing"><a style="text-decoration: none;color: white;" href="https://time.is/">Monday-Friday
+                    <br><span style="border: none;color:rgb(254, 189, 47);">8:00AM-9:00PM</a></span></p>
+            <p class="contact"><a style="text-decoration: none;color: white;"
+                    href="https://mail.google.com/mail/u/0/#inbox?compose=new">Support 24/7
+                    <br><span style="border: none;color:rgb(254, 189, 47); ;">+9179820XXXX</span></a></p>
+            <button>
+                <a href="/login.html" style="background-color: #173334;border: none;">
+                    <svg style="color: rgb(254, 189, 47);" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" fill="#febd2f"></path>
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+                            fill="#febd2f"></path>
+                    </svg>
+                </a>
+            </button>
+            <button>
+                <svg style="color: rgb(254, 189, 47);" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                        fill="#febd2f"></path>
+                </svg>
+            </button>
+            <div style="display: flex;align-items: center;gap:2px">
+                <span style="border: none;font-size: 14px;">
+                    <p>My cart:<br>0.00 INR</p>
+                </span>
+                <button action="nkcn.php">
+                    <svg style="color: rgb(254, 189, 47);" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="itmls" style="display: flex;align-items: center;">
+            <ul>
+                <li><a href="">All Categories</a></li>
+                <li> <a href=""> Vegetables</a></button></li>
+                <li><a href="">Fresh Fruits</a> </li>
+                <li><a href="">Cookies </a></li>
+                <li><a href="">Best Sellers</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <a href="/index.html">
+            <svg style="color: #173334;width:50px" xmlns="http://www.w3.org/2000/svg" width="512" height="512"
+                viewBox="0 0 512 512">
+                <title>ionicons-v5-a</title>
+                <polyline points="249.38 336 170 256 249.38 176"
+                    style="fill:none;stroke:#173334;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                <line x1="181.03" y1="256" x2="342" y2="256"
+                    style="fill:none;stroke:#173334;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                <path d="M448,256c0-106-86-192-192-192S64,150,64,256s86,192,192,192S448,362,448,256Z"
+                    style="fill:none;stroke:#173334;stroke-miterlimit:10;stroke-width:32px" />
+            </svg><br>
+            <h4 class="shop">Back to Shop</h4>
+        </a>
+        <h2 class="headlogin">Register</h2>
+        <div class="loginpage" style="background-color: white;box-shadow:5px 10px #17333447;">
+            <h1 style="font-size: large;padding: 10px;">Your Personal Detail</h1>
+            <hr style="color: #17333434;">
+            <form action="" style="margin-left: 30px;margin-top: 20px;" name="loginpage">
+                <label for="fname" style="float: left;">First Name: </label>
+                <label for="lname" style="margin-left: 36%;">Last name: </label>
+                <br>
+                <input type="text" name="fname"
+                    style="padding: 5px; border: 1px solid #17333481; color: #173334;background-color:white;margin-top: 5px;"
+                    placeholder="First name">
+                <input type="text" placeholder="Last name" name="lname"
+                    style="color: #173334;background-color: white;margin-left: 4vw;margin-top: 5px;border: 1px solid #17333472;padding: 5px;">
+            </form>
+            <br>
+            <form action="" style="margin-left: 30px;margin-top: 20px;">
+                <label for="email" style="float: left;">Email: </label>
+                <label for="contact" style="margin-left: 43%;">Contact No: </label>
+                <br>
+                <input type="email"
+                    style="padding: 5px; border: 1px solid #17333481; color: #173334;background-color: white;margin-top: 5px;"
+                    placeholder="Email">
+                <input class="sendotp" type="tel" inputmode="tel" placeholder="Contact No"
+                    style="color: #173334;background-color: white;margin-left: 4vw;margin-top: 5px;border: 1px solid #17333472;padding: 5px;">
+                <a style="margin-top: 10px;margin-left: 401px;font-size: small;margin-bottom: 20px;width: 80px;height:20px;text-decoration: none;list-style: none;border-radius: 3px;:hover{background-color: #173334;color: #febd2f;}"
+                    class="sendotp">Send Otp</a>
+            </form>
+            <hr style="margin-top: 60px;color: #17333452;">
+            <h1 style="font-size: large;padding: 10px;">Your Password</h1>
+
+            <hr style="margin-top: 50px;color: #17333452;margin-top: -5px;">
+            <form action="" style="margin-left: 30px;margin-top: 20px;">
+                <label for="passwd" style="float: left;">Password: </label>
+                <br>
+                <input type="password"
+                    style="padding: 5px; border: 1px solid #17333481; color: #173334;background-color:white;margin-top: 5px;"
+                    placeholder="Password">
+            </form>
+            <a class="sendmsg"
+                style="width: 200px;margin-top: -3px;;margin-left: 50%;background-color:#febd2f;color: #173334;height: 25px;border-radius: 5px;">
+                Send Message &#10141;
+            </a>
+        </div>
+    </main>
+    <footer style="height: 55vh;color: white;">
+        <div class="hello">
+            <div class="first" style="width: 30vw;">
+                <h4 style="color: #febd2f;font-size:x-large;">Auguskart</h4>
+                <p style="font-size: small;margin-top: 20px;line-height:18px;">Fruits, vegetables and lots of greens.
+                    Eat
+                    fruits plenty, keep
+                    your body
+                    healthy.
+                    We are the organization which provide the organic fruits and vegetable which are good for health and
+                    have a motive of healthy India and we know you will definetly help us to fullfill this dream.
+                </p>
+            </div>
+            <div class="second">
+                <h4 style="font-size: x-large;">Navigation</h4>
+                <p style="font-size: medium;margin-top: 20px;line-height: 30px;"><a href="/search">Search</a><br>
+                    <a href="/search">Cart</a><br>
+                    <a href="/search">Wishlist</a><br>
+                    <a href="/search">Login</a><br>
+                </p>
+            </div>
+            <div class="third">
+                <h4 class="about" style="font-size:x-large;">
+                    About Us
+                </h4>
+                <p style="width: 20vw;margin-top: 20px;line-height: 30px;">
+                    <a href="">About Us</a><br>
+                    <a href="">Contact Us</a><br>
+                    <a href="">Faq</a><br>
+                    <a href="">Shipping & Deliveries</a><br>
+                    <a href="">Terms and Condition</a><br>
+                </p>
+            </div>
+            <div class="fourth">
+                <h4 class="cate" style="font-size: x-large;">
+                    All Categories
+                </h4>
+                <p style="width: 20vw;margin-top: 20px;line-height: 30px;">
+                    <a href="">vegetables</a><br>
+                    <a href="">fruits</a><br>
+                    <a href="">Accessories</a><br>
+                    <a href="">Cookies</a><br>
+                    <a href="">Best Sellers</a><br>
+                </p>
+            </div>
+        </div>
+        <p style="text-align: center;">&copy; Auguskart , Created by Kuldeep Chotiya :)</p>
+    </footer>
+</body>
+
+</html>
