@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auguskart: Security Check</title>
+    <link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/psswd.css">
+    <script src="/passwd.js"></script>
+</head>
+
+<body>
+    <div class="ma">
+        <h1 class="logo">
+            Auguskart
+        </h1>
+        <div class="main">
+            <img src="/lock.png" alt="">
+            <p>This page is Password Protected.</p>
+            <form action="/main.html" name="psswdform" onsubmit="return authenticate()">
+                <label for="Password">Password: </label>
+                <input type="password" name="pss">
+                <button>Enter</button>
+                <a href="/main.html">Are You Visitor :) Enter 1 or click</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
