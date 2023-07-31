@@ -28,7 +28,7 @@ div .main {
     transition-duration: 1s;
     transition-property: border-radius, background-color, transform;
     transition-timing-function: ease-out;
-    box-shadow: 1vw 1vw 1vw rgb(212, 153, 3);
+    filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.481));
     justify-content: space-around;
     display: flex;
     flex-direction: column;
@@ -65,12 +65,12 @@ form {
 }
 
 form input {
+    text-align: center;
     border: none;
     margin-top: 1.5;
     padding: 0.5vw;
     outline: none;
     font-size: 1vw;
-    width: 50%;
     transition: 0.7s;
     transition-property: padding, height, background-color, border-radius;
 }
@@ -90,6 +90,7 @@ form label {
 }
 
 form a {
+    text-align: center;
     margin-top: 1vh;
     font-size: 1vw;
     color: #173334;
@@ -98,6 +99,8 @@ form a {
 }
 
 form button {
+    border-radius: 1vw;
+    margin-left: 40%;
     width: 20%;
     padding: 0.25vw;
     cursor: pointer;
@@ -111,7 +114,7 @@ form button {
 }
 
 form button:hover {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
 }
 
@@ -135,7 +138,6 @@ form button:hover {
     }
     form input {
         font-size: 2vw;
-        width: 50%;
         transition: 0.7s;
         transition-property: padding, height, background-color, border-radius;
     }
